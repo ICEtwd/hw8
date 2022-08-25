@@ -1,31 +1,70 @@
+import java.time.LocalDate;
+
 public class Main {
 
-    public static void printSeparator(){
-        System.out.println("++++++++++");
-        System.out.println("----------");
-    }
-    public static void printIssues(int issuesCount){
-        System.out.println(issuesCount);
+    //Task 1
+    public static int selectYear (){
+        int year = 2021;
+        return year;
     }
 
-    public static int sum(int [] numbers){
-        int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum = sum + numbers[i];
+    //Task 2
+    public static String getClientOS (String name) {
+        if (name.equals("IOS")) {
+            return name;
         }
-        return sum;
+        return name;
     }
-    public static void main(String[] args) {
-        int [] issuesByMonth = {4,6,7,9,2,5,12,3,7,10,6,7,1,8};
-        printSeparator();
-        for (int i = 0; i < issuesByMonth.length; i++) {
-            printIssues(issuesByMonth[i]);
-            if ((i+1) % 3 ==0) {
-                printSeparator();
-            }
+
+    public static int getYearOS (int phoneYear) {
+        int currentYear = LocalDate.now().getYear();
+        if (phoneYear < currentYear) {
+            System.out.print("Установите облегченную версию приложения для ");
+        } else {
+            System.out.print("Установите версию приложения для ");
         }
-        printSeparator();
-        int total = sum(issuesByMonth);
-        printIssues(total);
+        return phoneYear;
+    }
+
+
+    //Task 3
+
+    public static int deliver (int distance){
+        int startInterval = 20;
+        int interval = 40;
+        int day = 1;
+        if (distance <= startInterval) {
+            day = 1;
+        } else {
+            day = day + (int) Math.ceil((distance - startInterval) / interval) + 1;
+        }
+        return day;
+    }
+
+    public static void main(String[] args) {
+
+        //Task 1
+            int total = selectYear();
+        if (total % 4 == 0 && total % 100 != 0 || total % 400 == 0 && total %100 != 0) {
+            System.out.println(total + " - Год високосный");
+        }else {
+            System.out.println(total + " - Год не високосный");
+        }
+
+        //Task 2
+
+        String osName = "IOS";
+        int phYear = 2015;
+        String clientOS = getClientOS(osName);
+        int phoneYear = getYearOS(phYear);
+        System.out.println(clientOS);
+
+
+        //Task 3
+
+        int lenght = 95;
+        int deliveryDays = deliver(lenght);
+        System.out.println("Доставка займет " + deliveryDays + " дня");
+
     }
 }
