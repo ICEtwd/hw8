@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Main {
 
     //Task 1
-    private static void year (String[] args) {
+    private static void year () {
         int year = 2024;
         if (year % 4 == 0 || year % 400 == 0 && year %100 != 0 ) {
             System.out.println(year + " - Год високосный");
@@ -12,21 +12,21 @@ public class Main {
         }
     }
 
-    //Task 2
-    private static String getClientOS (String name) {
-        if (name.equals("IOS")) {
-        }
-        return name;
-    }
 
-    private static int getYearOS (int phoneYear) {
+    //Task 2
+
+
+    private static String getClientOS () {
+
+        String osName = "IOS";
+        int phoneYear = 2023;
         int currentYear = LocalDate.now().getYear();
         if (phoneYear < currentYear) {
-            System.out.print("Установите облегченную версию приложения для ");
+            System.out.print("Установите облегченную версию приложения для " + osName);
         } else {
             System.out.print("Установите версию приложения для ");
         }
-        return phoneYear;
+        return osName;
     }
 
 
@@ -51,12 +51,7 @@ public class Main {
 
         //Task 2
 
-        String osName = "IOS";
-        int phYear = 2023;
-        String clientOS = getClientOS(osName);
-        int phoneYear = getYearOS(phYear);
-        System.out.println(clientOS);
-
+        System.out.println(getClientOS());
 
         //Task 3
 
