@@ -3,13 +3,13 @@ import java.time.LocalDate;
 public class Main {
 
     //Task 1
-    private static int selectYear ( int year){
+    private static void year (String[] args) {
+        int year = 2024;
         if (year % 4 == 0 || year % 400 == 0 && year %100 != 0 ) {
             System.out.println(year + " - Год високосный");
         }else {
             System.out.println(year + " - Год не високосный");
         }
-        return year;
     }
 
     //Task 2
@@ -47,8 +47,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Task 1
-        int year = 2024;
-        int total = selectYear(year);
+
 
         //Task 2
 
