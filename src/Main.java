@@ -4,12 +4,11 @@ public class Main {
 
     //Task 1
     private static int selectYear ( int year){
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0 && year %100 != 0) {
+        if (year % 4 == 0 || year % 400 == 0 && year %100 != 0 ) {
             System.out.println(year + " - Год високосный");
         }else {
             System.out.println(year + " - Год не високосный");
         }
-
         return year;
     }
 
@@ -48,7 +47,6 @@ public class Main {
     public static void main(String[] args) {
 
         //Task 1
-
         int year = 2024;
         int total = selectYear(year);
 
