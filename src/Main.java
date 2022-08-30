@@ -16,10 +16,10 @@ public class Main {
     //Task 2
 
 
-    private static void getClientOS () {
+    private static void getClientOS (String osName, int phoneYear ) {
 
-        String osName = "Android";
-        int phoneYear = 2023;
+        osName = "Android";
+        phoneYear = 2023;
         int currentYear = LocalDate.now().getYear();
         if (phoneYear < currentYear) {
             System.out.println("Установите облегченную версию приложения для " + osName);
@@ -51,7 +51,7 @@ public class Main {
 
         //Task 2
 
-        getClientOS();
+        getClientOS("Android",2023);
 
         //Task 3
 
