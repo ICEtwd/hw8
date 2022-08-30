@@ -22,9 +22,9 @@ public class Main {
         int phoneYear = 2023;
         int currentYear = LocalDate.now().getYear();
         if (phoneYear < currentYear) {
-            System.out.print("Установите облегченную версию приложения для " + osName);
+            System.out.println("Установите облегченную версию приложения для " + osName);
         } else {
-            System.out.print("Установите версию приложения для " + osName);
+            System.out.println("Установите версию приложения для " + osName);
         }
     }
 
@@ -47,9 +47,11 @@ public class Main {
 
         //Task 1
 
+        year();
 
         //Task 2
 
+        getClientOS();
 
         //Task 3
 
