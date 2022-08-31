@@ -3,8 +3,8 @@ import java.time.LocalDate;
 public class Main {
 
     //Task 1
-    private static void year () {
-        int year = 2024;
+    private static void printYear (int year) {
+
         if (year % 4 == 0 || year % 400 == 0 && year %100 != 0 ) {
             System.out.println(year + " - Год високосный");
         }else {
@@ -16,10 +16,9 @@ public class Main {
     //Task 2
 
 
-    private static void getClientOS (String osName, int phoneYear ) {
+    private static void printClientOS (String osName, int phoneYear ) {
 
-        osName = "Android";
-        phoneYear = 2023;
+
         int currentYear = LocalDate.now().getYear();
         if (phoneYear < currentYear) {
             System.out.println("Установите облегченную версию приложения для " + osName);
@@ -31,7 +30,7 @@ public class Main {
 
     //Task 3
 
-    private static int getDeliver (int distance){
+    private static int calculateDeliver (int distance){
         int startInterval = 20;
         int interval = 40;
         int day = 1;
@@ -47,16 +46,16 @@ public class Main {
 
         //Task 1
 
-        year();
+        printYear(2024);
 
         //Task 2
 
-        getClientOS("Android",2023);
+        printClientOS("IOS",2023);
 
         //Task 3
 
         int lenght = 95;
-        int deliveryDays = getDeliver(lenght);
+        int deliveryDays = calculateDeliver(lenght);
         System.out.println("Доставка займет " + deliveryDays + " дня");
 
     }
